@@ -1,0 +1,50 @@
+# .NET Core
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.json
+*.xml
+*.csproj
+*.nuget.props
+*.nuget.targets
+*.obj
+*.vs
+*.bak
+*.user
+*.ncrunch*
+*.suo
+*.cache
+*.log
+*.vspscc
+*.vspx
+*.dotCover
+*.resharper
+*.sln.docstates
+*.sln.ide
+*.sln.ide-shm
+*.sln.ide-wal
+*.idea
+*.DS_Store
+
+# Visual Studio Code
+.vscode/
+
+# Packages
+/packages
+*.nupkg
+*.paket.restore.log
+*.paket.references
+paket-files/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
