@@ -3,11 +3,64 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Meeting.Management.Presentation", "01 - Meeting.Management.Presentation", "{3087961D-C8AA-4A4D-A751-A6AE991AC427}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Meeting.Management.Application", "02 - Meeting.Management.Application", "{ED7D31D1-2544-4B65-B863-A69D0E63FE8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Meeting.Management.Domain", "03 - Meeting.Management.Domain", "{BCC6DBE1-4E16-4BFA-9E58-B3D0131B9AA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Meeting.Management.Infrastructure", "04 - Meeting.Management.Infrastructure", "{31F56444-6949-4C75-BB85-2D7237700FC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Meeting.Management.Tests", "05 - Meeting.Management.Tests", "{13E5D8D1-7BFE-4CE2-A856-1249277CD908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meeting.Management.Presentation.Api", "Meeting.Management.Presentation.Api\Meeting.Management.Presentation.Api.csproj", "{BAA578A2-B554-44EC-BF41-601E9AF16E08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meeting.Management.Application", "Meeting.Management.Application\Meeting.Management.Application.csproj", "{06D80533-0005-451E-9378-DC11AA99A9FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meeting.Management.Domain", "Meeting.Management.Domain\Meeting.Management.Domain.csproj", "{5D9BA80D-1F28-47DE-8C1D-34E7876396B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meeting.Management.Infrastructure", "Meeting.Management.Infrastructure\Meeting.Management.Infrastructure.csproj", "{EA0FD39F-CF92-467E-8B81-2137E49195E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meeting.Management.Tests", "Meeting.Management.Tests\Meeting.Management.Tests.csproj", "{4307F156-A9B0-42D3-9DA2-750566617389}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA578A2-B554-44EC-BF41-601E9AF16E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA578A2-B554-44EC-BF41-601E9AF16E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA578A2-B554-44EC-BF41-601E9AF16E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA578A2-B554-44EC-BF41-601E9AF16E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D80533-0005-451E-9378-DC11AA99A9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D80533-0005-451E-9378-DC11AA99A9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D80533-0005-451E-9378-DC11AA99A9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D80533-0005-451E-9378-DC11AA99A9FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D9BA80D-1F28-47DE-8C1D-34E7876396B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D9BA80D-1F28-47DE-8C1D-34E7876396B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D9BA80D-1F28-47DE-8C1D-34E7876396B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D9BA80D-1F28-47DE-8C1D-34E7876396B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0FD39F-CF92-467E-8B81-2137E49195E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0FD39F-CF92-467E-8B81-2137E49195E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0FD39F-CF92-467E-8B81-2137E49195E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0FD39F-CF92-467E-8B81-2137E49195E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4307F156-A9B0-42D3-9DA2-750566617389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4307F156-A9B0-42D3-9DA2-750566617389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4307F156-A9B0-42D3-9DA2-750566617389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4307F156-A9B0-42D3-9DA2-750566617389}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAA578A2-B554-44EC-BF41-601E9AF16E08} = {3087961D-C8AA-4A4D-A751-A6AE991AC427}
+		{06D80533-0005-451E-9378-DC11AA99A9FF} = {ED7D31D1-2544-4B65-B863-A69D0E63FE8A}
+		{5D9BA80D-1F28-47DE-8C1D-34E7876396B3} = {BCC6DBE1-4E16-4BFA-9E58-B3D0131B9AA8}
+		{EA0FD39F-CF92-467E-8B81-2137E49195E0} = {31F56444-6949-4C75-BB85-2D7237700FC7}
+		{4307F156-A9B0-42D3-9DA2-750566617389} = {13E5D8D1-7BFE-4CE2-A856-1249277CD908}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6D144673-662B-4DCA-BC67-4636E31D50D3}
+		SolutionGuid = {51CBD489-59BA-40F6-BBB2-7B595D348086}
 	EndGlobalSection
 EndGlobal
