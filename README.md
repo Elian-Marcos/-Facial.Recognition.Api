@@ -1,3 +1,83 @@
+=========================================================================================================================================================================
+=========================================================================================================================================================================
+Meeting Management API
+=========================
+
+This API is designed to manage users, user levels, meetings, and meeting attendance through facial recognition.
+
+Technologies Used
+----------------------
+
+* .NET Core 8
+* Entity Framework Core
+* Mediator
+* CQRS
+
+Environment Setting
+------------------------
+
+Make sure you have .NET Core 8 installed on your machine. To configure the environment, follow the steps below:
+
+1. Clone this repository to your local machine.
+2. Open the project in your preferred code editor.
+3. Configure the database connection string in the `appsettings.json` file.
+
+json
+
+Copy code
+
+`"ConnectionStrings": { "DefaultConnection": "your_connection_string_here" }`
+
+4. Run the Entity Framework Core migrations to create the database:
+
+bash
+
+Copy code
+
+`dotnet ef database update`
+
+5. Launch the application:
+
+bash
+
+Copy code
+
+`dotnet run`
+
+API routes
+------------
+
+### Users
+
+* **GET /api/usuarios**: Returns all registered users.
+* **GET /api/usuarios/{id}**: Returns a specific user by ID.
+* **POST /api/usuarios**: Creates a new user.
+* **PUT /api/usuarios/{id}**: Updates an existing user by ID.
+* **DELETE /api/usuarios/{id}**: Removes a user by ID.
+
+### User Levels
+
+* **GET /api/niveis**: Returns all registered user levels.
+* **GET /api/niveis/{id}**: Returns a specific user level by ID.
+* **POST /api/niveis**: Creates a new user level.
+* **PUT /api/niveis/{id}**: Updates an existing user level by ID.
+* **DELETE /api/niveis/{id}**: Removes a user level by ID.
+
+### Meetings
+
+* **GET /api/reunioes**: Returns all registered meetings.
+* **GET /api/reunioes/{id}**: Returns a specific meeting by ID.
+* **POST /api/reunioes**: Creates a new meeting.
+* **PUT /api/reunioes/{id}**: Updates an existing meeting by ID.
+* **DELETE /api/reunioes/{id}**: Removes a meeting by ID.
+
+### Attendance at Meetings
+
+* **POST /api/reunioes/{id}/presenca**: Registers presence in a meeting using facial recognition. Send the image of the user's face in the body of the request.
+
+=========================================================================================================================================================================
+=========================================================================================================================================================================
+
 API de Gestão de Reuniões
 =========================
 
