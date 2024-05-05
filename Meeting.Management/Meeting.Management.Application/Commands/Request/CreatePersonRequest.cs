@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using Meeting.Management.Domain.Commands.Response;
+using Meeting.Management.Application.Commands.Response;
 using Meeting.Management.Domain.Entities;
 
-namespace Meeting.Management.Domain.Commands.Request
+namespace Meeting.Management.Application.Commands.Request
 {
-    public class CreateUserRequest : IRequest<CreateUserResponse>
+    public class CreatePersonRequest : IRequest<CreatePersonResponse>
     {
         public string Username { get; set; }
         public string PasswordHash { get; set; }

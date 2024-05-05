@@ -1,5 +1,4 @@
-﻿using Meeting.Management.Domain.Commands.Request;
-using Meeting.Management.Domain.Entities;
+﻿using Meeting.Management.Domain.Entities;
 using Meeting.Management.Infrastructure.Context;
 using Meeting.Management.Infrastructure.Interface;
 using Microsoft.EntityFrameworkCore;
@@ -15,13 +14,13 @@ namespace Meeting.Management.Infrastructure.Repository
             _dbContext = dbContext;
         }
 
-        public async Task CreateAsync(User user)
+        public async Task CreateAsync(Person user)
         {
             await _dbContext.User.AddAsync(user);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<User>> GetAll()
+        public async Task<IEnumerable<Person>> GetAll()
         {
             return await _dbContext.User.ToListAsync();
         }

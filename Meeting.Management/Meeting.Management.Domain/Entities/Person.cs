@@ -1,8 +1,6 @@
-﻿using Meeting.Management.Domain.Entities;
-
-namespace Meeting.Management.Domain.Commands.Response
+﻿namespace Meeting.Management.Domain.Entities
 {
-    public class CreateUserResponse
+    public class Person
     {
         public Guid Id { get; set; }
         public string Username { get; set; }
