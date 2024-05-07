@@ -49,31 +49,31 @@ API routes
 
 ### Persons
 
-* **GET /api/persons**: Returns all registered persons.
-* **GET /api/persons/{id}**: Returns a specific person by ID.
-* **POST /api/persons**: Creates a new person.
-* **PUT /api/persons/{id}**: Updates an existing person by ID.
-* **DELETE /api/persons/{id}**: Removes a person by ID.
+* **GET /api/v1/persons**: Returns all registered persons.
+* **GET /api/v1/persons/{id}**: Returns a specific person by ID.
+* **POST /api/v1/persons**: Creates a new person.
+* **PUT /api/v1/persons/{id}**: Updates an existing person by ID.
+* **DELETE /api/v1/persons/{id}**: Removes a person by ID.
 
 ### Persons Levels
 
-* **GET /api/personLevels**: Returns all registered person levels.
-* **GET /api/personLevels/{id}**: Returns a specific person level by ID.
-* **POST /api/personLevels**: Creates a new person level.
-* **PUT /api/personLevels/{id}**: Updates an existing person level by ID.
-* **DELETE /api/personLevels/{id}**: Removes a person level by ID.
+* **GET /api/v1/personLevels**: Returns all registered person levels.
+* **GET /api/v1/personLevels/{id}**: Returns a specific person level by ID.
+* **POST /api/v1/personLevels**: Creates a new person level.
+* **PUT /api/v1/personLevels/{id}**: Updates an existing person level by ID.
+* **DELETE /api/v1/personLevels/{id}**: Removes a person level by ID.
 
 ### Meetings
 
-* **GET /api/meetings**: Returns all registered meetings.
-* **GET /api/meetings/{id}**: Returns a specific meeting by ID.
-* **POST /api/meetings**: Creates a new meeting.
-* **PUT /api/meetings/{id}**: Updates an existing meeting by ID.
-* **DELETE /api/meetings/{id}**: Removes a meeting by ID.
+* **GET /api/v1/meetings**: Returns all registered meetings.
+* **GET /api/v1/meetings/{id}**: Returns a specific meeting by ID.
+* **POST /api/v1/meetings**: Creates a new meeting.
+* **PUT /api/v1/meetings/{id}**: Updates an existing meeting by ID.
+* **DELETE /api/v1/meetings/{id}**: Removes a meeting by ID.
 
 ### Attendance at Meetings
 
-* **POST /api/meetings/{id}/attendance**: Registers presence in a meeting using facial recognition. Send the image of the person's face in the body of the request.
+* **POST /api/v1/meetings/{id}/attendance**: Registers presence in a meeting using facial recognition. Send the image of the person's face in the body of the request.
 
 PT-BR
 -----
@@ -129,28 +129,28 @@ Rotas da API
 
 ### Pessoas
 
-*   **GET /api/persons**: Retorna todos os pessoas cadastradas.
-*   **GET /api/persons/{id}**: Retorna uma pessoa específica pelo ID.
-*   **POST /api/persons**: Cria uma nova pessoa.
-*   **PUT /api/persons/{id}**: Atualiza uma pessoa existente pelo ID.
-*   **DELETE /api/persons/{id}**: Remove uma pessoa pelo ID.
+*   **GET /api/v1/persons**: Retorna todos os pessoas cadastradas.
+*   **GET /api/v1/persons/{id}**: Retorna uma pessoa específica pelo ID.
+*   **POST /api/v1/persons**: Cria uma nova pessoa.
+*   **PUT /api/v1/persons/{id}**: Atualiza uma pessoa existente pelo ID.
+*   **DELETE /api/v1/persons/{id}**: Remove uma pessoa pelo ID.
 
 ### Níveis de Usuário
 
-*   **GET /api/personLevels**: Retorna todos os níveis de pessoas cadastrados.
-*   **GET /api/personLevels/{id}**: Retorna um nível de pessoa específico pelo ID.
-*   **POST /api/personLevels**: Cria um novo nível de pessoa.
-*   **PUT /api/personLevels/{id}**: Atualiza um nível de pessoa existente pelo ID.
-*   **DELETE /api/personLevels/{id}**: Remove um nível de pessoa pelo ID.
+*   **GET /api/v1/personLevels**: Retorna todos os níveis de pessoas cadastrados.
+*   **GET /api/v1/personLevels/{id}**: Retorna um nível de pessoa específico pelo ID.
+*   **POST /api/v1/personLevels**: Cria um novo nível de pessoa.
+*   **PUT /api/v1/personLevels/{id}**: Atualiza um nível de pessoa existente pelo ID.
+*   **DELETE /api/v1/personLevels/{id}**: Remove um nível de pessoa pelo ID.
 
 ### Reuniões
 
-*   **GET /api/meetings**: Retorna todas as reuniões cadastradas.
-*   **GET /api/meetings/{id}**: Retorna uma reunião específica pelo ID.
-*   **POST /api/meetings**: Cria uma nova reunião.
-*   **PUT /api/meetings/{id}**: Atualiza uma reunião existente pelo ID.
-*   **DELETE /api/meetings/{id}**: Remove uma reunião pelo ID.
+*   **GET /api/v1/meetings**: Retorna todas as reuniões cadastradas.
+*   **GET /api/v1/meetings/{id}**: Retorna uma reunião específica pelo ID.
+*   **POST /api/v1/meetings**: Cria uma nova reunião.
+*   **PUT /api/v1/meetings/{id}**: Atualiza uma reunião existente pelo ID.
+*   **DELETE /api/v1/meetings/{id}**: Remove uma reunião pelo ID.
 
 ### Presença em Reuniões
 
-*   **POST /api/meetings/{id}/attendance**: Registra a presença em uma reunião através de reconhecimento facial. Envie a imagem do rosto do usuário no corpo da requisição.
+*   **POST /api/v1/meetings/{id}/attendance**: Registra a presença em uma reunião através de reconhecimento facial. Envie a imagem do rosto do usuário no corpo da requisição.
