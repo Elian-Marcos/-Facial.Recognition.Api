@@ -29,6 +29,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles();
+app.UseCors(builder =>
+    builder.WithOrigins("http://localhost:5000") // Altere para o endereço do seu aplicativo front-end
+        .AllowAnyHeader()
+        .AllowAnyMethod());
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

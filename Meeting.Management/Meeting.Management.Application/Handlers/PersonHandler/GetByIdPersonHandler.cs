@@ -5,20 +5,18 @@ using Meeting.Management.Infrastructure.Interface;
 
 namespace Meeting.Management.Application.Handlers.PersonHandler
 {
-    public class GetAllPersonHandler : IRequestHandler<GetAllPersonRequest, IEnumerable<Person>>
+    public class GetByIdPersonHandler : IRequestHandler<GetPersonByIdRequest, Person>
     {
         private readonly IPersonRepository _personRepository;
-
-        public GetAllPersonHandler(IPersonRepository personRepository)
+        public GetByIdPersonHandler(IPersonRepository personRepository)
         {
             _personRepository = personRepository;
         }
 
-        public async Task<IEnumerable<Person>> Handle(GetAllPersonRequest request, CancellationToken cancellationToken)
+        public async Task<Person> Handle(GetPersonByIdRequest request, CancellationToken cancellationToken)
         {
-            var result = await _personRepository.GetAll();
-
-            return await Task.FromResult(result);
+            var person = await _personRepository.GetById(request.Id);
+            return await Task.FromResult(person);
         }
     }
 }

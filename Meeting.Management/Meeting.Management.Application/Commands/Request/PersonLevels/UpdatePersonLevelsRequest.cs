@@ -1,8 +1,9 @@
-﻿using Meeting.Management.Domain.Enums;
+﻿using MediatR;
+using Meeting.Management.Domain.Enums;
 
-namespace Meeting.Management.Domain.Entities
+namespace Meeting.Management.Application.Commands.Request.Person
 {
-    public class Person
+    public class UpdatePersonLevelsRequest : IRequest<Unit>
     {
         public Guid Id { get; set; }
         public string Username { get; set; }

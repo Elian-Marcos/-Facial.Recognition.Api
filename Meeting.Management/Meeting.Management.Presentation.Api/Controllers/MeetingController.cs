@@ -1,24 +1,25 @@
 ﻿using MediatR;
 using Meeting.Management.Application.Commands.Request.Person;
-using Meeting.Management.Application.Queries.Request.Persons;
+using Meeting.Management.Application.Queries.Request.Person;
 using Meeting.Management.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Meeting.Management.Presentation.Api.Controllers
 {
-    [Route("api/v1/persons")]
+    [Route("api/v1/meetings")]
     [ApiController]
-    public class PersonController : ControllerBase
+    public class MeetingController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public PersonController(IMediator mediator)
+        public MeetingController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
         [HttpPost("create")]
-        public async Task<ActionResult<Person>> Create([FromBody]CreatePersonRequest command)
+        public async Task<ActionResult<Meeting>> Create([FromBody]CreateMeetingRequest command)
         {
             var form = HttpContext.Request.Form;
             var file = form.Files.FirstOrDefault();
@@ -37,28 +38,28 @@ namespace Meeting.Management.Presentation.Api.Controllers
         }
 
         [HttpGet("getAll")]
-        public async Task<ActionResult<Person>> GetAll([FromQuery] GetAllPersonRequest query)
+        public async Task<ActionResult<Meeting>> GetAll([FromQuery] GetAllMeetingRequest query)
         {
             var result = await _mediator.Send(query);
             return Ok(result);
         }
 
         [HttpGet("getById")]
-        public async Task<ActionResult<Person>> GetById([FromQuery] GetPersonByIdRequest query)
+        public async Task<ActionResult<Meeting>> GetById([FromQuery] GetMeetingByIdRequest query)
         {
             var result = await _mediator.Send(query);
             return Ok(result);
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult<Person>> Update([FromBody] UpdatePersonRequest command)
+        public async Task<ActionResult<Meeting>> Update([FromBody] UpdateMeetingRequest command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);
         }
 
         [HttpPost("delete")]
-        public async Task<IActionResult> Delete(DeletePersonRequest command)
+        public async Task<IActionResult> Delete(DeleteMeetingRequest command)
         {
             await _mediator.Send(command);
             return NoContent();

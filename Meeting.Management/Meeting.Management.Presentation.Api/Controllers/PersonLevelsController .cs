@@ -6,59 +6,47 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Meeting.Management.Presentation.Api.Controllers
 {
-    [Route("api/v1/persons")]
+    [Route("api/v1/personLevels")]
     [ApiController]
-    public class PersonController : ControllerBase
+    public class PersonLevelsController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public PersonController(IMediator mediator)
+        public PersonLevelsController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
         [HttpPost("create")]
-        public async Task<ActionResult<Person>> Create([FromBody]CreatePersonRequest command)
+        public async Task<ActionResult<Person>> Create([FromBody]CreatePersonLevelsRequest command)
         {
-            var form = HttpContext.Request.Form;
-            var file = form.Files.FirstOrDefault();
-
-            if (file == null || file.Length == 0)
-                return BadRequest("Invalid file");
-
-            using (var memoryStream = new MemoryStream())
-            {
-                await file.CopyToAsync(memoryStream);
-                command.Photo = memoryStream.ToArray();
-            }
-
             var result = await _mediator.Send(command);
             return Ok(result);  
         }
 
         [HttpGet("getAll")]
-        public async Task<ActionResult<Person>> GetAll([FromQuery] GetAllPersonRequest query)
+        public async Task<ActionResult<Person>> GetAll([FromQuery] GetAllPersonLevelsRequest query)
         {
             var result = await _mediator.Send(query);
             return Ok(result);
         }
 
         [HttpGet("getById")]
-        public async Task<ActionResult<Person>> GetById([FromQuery] GetPersonByIdRequest query)
+        public async Task<ActionResult<Person>> GetById([FromQuery] GetPersonLevelsByIdRequest query)
         {
             var result = await _mediator.Send(query);
             return Ok(result);
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult<Person>> Update([FromBody] UpdatePersonRequest command)
+        public async Task<ActionResult<Person>> Update([FromBody] UpdatePersonLevelsRequest command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);
         }
 
         [HttpPost("delete")]
-        public async Task<IActionResult> Delete(DeletePersonRequest command)
+        public async Task<IActionResult> Delete(DeletePersonLevelsRequest command)
         {
             await _mediator.Send(command);
             return NoContent();

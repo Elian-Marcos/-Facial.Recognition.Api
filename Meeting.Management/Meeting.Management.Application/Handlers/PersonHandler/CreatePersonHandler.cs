@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using Meeting.Management.Application.Commands.Request;
-using Meeting.Management.Application.Commands.Response;
+using Meeting.Management.Application.Commands.Request.Person;
+using Meeting.Management.Application.Commands.Response.Person;
 using Meeting.Management.Domain.Entities;
 using Meeting.Management.Infrastructure.Interface;
 
@@ -8,9 +8,9 @@ namespace Meeting.Management.Application.Handlers.PersonHandler
 {
     public class CreatePersonHandler : IRequestHandler<CreatePersonRequest, CreatePersonResponse>
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IPersonRepository _userRepository;
 
-        public CreatePersonHandler(IUserRepository userRepository)
+        public CreatePersonHandler(IPersonRepository userRepository)
         {
             _userRepository = userRepository;
         }
@@ -21,7 +21,8 @@ namespace Meeting.Management.Application.Handlers.PersonHandler
             {
                 Username = request.Username,
                 PasswordHash = request.PasswordHash,
-                Level = request.Level
+                Level = request.Level,
+                Photo = request.Photo
             };
 
             await _userRepository.CreateAsync(person);
@@ -30,7 +31,8 @@ namespace Meeting.Management.Application.Handlers.PersonHandler
             {
                 Username = request.Username,
                 PasswordHash = request.PasswordHash,
-                Level = request.Level
+                Level = request.Level,
+                Photo = request.Photo
             };
 
             return await Task.FromResult(result);

@@ -1,4 +1,5 @@
 ﻿using Meeting.Management.Domain.Entities;
+using Meeting.Management.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace Meeting.Management.Infrastructure.Context
@@ -7,6 +8,7 @@ namespace Meeting.Management.Infrastructure.Context
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Person> User { get ; set; }
+        public DbSet<Person> Person { get ; set; }
+        public DbSet<Level> Level { get ; set; }
     }
 }
