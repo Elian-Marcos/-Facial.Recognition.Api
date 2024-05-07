@@ -1,3 +1,83 @@
+Meeting Management API
+=========================
+
+This API is designed to manage persons, persons levels, meetings, and meeting attendance through facial recognition.
+
+Technologies Used
+----------------------
+
+* .NET Core 8
+* Entity Framework Core
+* Mediator
+* CQRS
+* CognitiveServices Vision Face
+* SQL Server
+
+Environment Setting
+------------------------
+
+Make sure you have .NET Core 8 installed on your machine. To configure the environment, follow the steps below:
+
+1. Clone this repository to your local machine.
+2. Open the project in your preferred code editor.
+3. Configure the database connection string in the `appsettings.json` file.
+
+json
+
+Copy code
+
+`"ConnectionStrings": { "DefaultConnection": "your_connection_string_here" }`
+
+4. Run the Entity Framework Core migrations to create the database:
+
+bash
+
+Copy code
+
+`dotnet ef database update`
+
+5. Launch the application:
+
+bash
+
+Copy code
+
+`dotnet run`
+
+API routes
+------------
+
+### Persons
+
+* **GET /api/v1/persons**: Returns all registered persons.
+* **GET /api/v1/persons/{id}**: Returns a specific person by ID.
+* **POST /api/v1/persons**: Creates a new person.
+* **PUT /api/v1/persons/{id}**: Updates an existing person by ID.
+* **DELETE /api/v1/persons/{id}**: Removes a person by ID.
+
+### Persons Levels
+
+* **GET /api/v1/personLevels**: Returns all registered person levels.
+* **GET /api/v1/personLevels/{id}**: Returns a specific person level by ID.
+* **POST /api/v1/personLevels**: Creates a new person level.
+* **PUT /api/v1/personLevels/{id}**: Updates an existing person level by ID.
+* **DELETE /api/v1/personLevels/{id}**: Removes a person level by ID.
+
+### Meetings
+
+* **GET /api/v1/meetings**: Returns all registered meetings.
+* **GET /api/v1/meetings/{id}**: Returns a specific meeting by ID.
+* **POST /api/v1/meetings**: Creates a new meeting.
+* **PUT /api/v1/meetings/{id}**: Updates an existing meeting by ID.
+* **DELETE /api/v1/meetings/{id}**: Removes a meeting by ID.
+
+### Attendance at Meetings
+
+* **POST /api/v1/meetings/{id}/attendance**: Registers presence in a meeting using facial recognition. Send the image of the person's face in the body of the request.
+
+PT-BR
+-----
+
 API de Gestão de Reuniões
 =========================
 
@@ -6,10 +86,12 @@ Esta API foi desenvolvida para gerenciar usuários, níveis de usuário, reuniõ
 Tecnologias Utilizadas
 ----------------------
 
-*   .NET Core 8
-*   Entity Framework Core
-*   Mediator
-*   CQRS
+* .NET Core 8
+* Entity Framework Core
+* Mediator
+* CQRS
+* CognitiveServices Vision Face
+* SQL Server
 
 Configuração do Ambiente
 ------------------------
@@ -45,30 +127,30 @@ Copy code
 Rotas da API
 ------------
 
-### Usuários
+### Pessoas
 
-*   **GET /api/usuarios**: Retorna todos os usuários cadastrados.
-*   **GET /api/usuarios/{id}**: Retorna um usuário específico pelo ID.
-*   **POST /api/usuarios**: Cria um novo usuário.
-*   **PUT /api/usuarios/{id}**: Atualiza um usuário existente pelo ID.
-*   **DELETE /api/usuarios/{id}**: Remove um usuário pelo ID.
+*   **GET /api/v1/persons**: Retorna todos os pessoas cadastradas.
+*   **GET /api/v1/persons/{id}**: Retorna uma pessoa específica pelo ID.
+*   **POST /api/v1/persons**: Cria uma nova pessoa.
+*   **PUT /api/v1/persons/{id}**: Atualiza uma pessoa existente pelo ID.
+*   **DELETE /api/v1/persons/{id}**: Remove uma pessoa pelo ID.
 
 ### Níveis de Usuário
 
-*   **GET /api/niveis**: Retorna todos os níveis de usuário cadastrados.
-*   **GET /api/niveis/{id}**: Retorna um nível de usuário específico pelo ID.
-*   **POST /api/niveis**: Cria um novo nível de usuário.
-*   **PUT /api/niveis/{id}**: Atualiza um nível de usuário existente pelo ID.
-*   **DELETE /api/niveis/{id}**: Remove um nível de usuário pelo ID.
+*   **GET /api/v1/personLevels**: Retorna todos os níveis de pessoas cadastrados.
+*   **GET /api/v1/personLevels/{id}**: Retorna um nível de pessoa específico pelo ID.
+*   **POST /api/v1/personLevels**: Cria um novo nível de pessoa.
+*   **PUT /api/v1/personLevels/{id}**: Atualiza um nível de pessoa existente pelo ID.
+*   **DELETE /api/v1/personLevels/{id}**: Remove um nível de pessoa pelo ID.
 
 ### Reuniões
 
-*   **GET /api/reunioes**: Retorna todas as reuniões cadastradas.
-*   **GET /api/reunioes/{id}**: Retorna uma reunião específica pelo ID.
-*   **POST /api/reunioes**: Cria uma nova reunião.
-*   **PUT /api/reunioes/{id}**: Atualiza uma reunião existente pelo ID.
-*   **DELETE /api/reunioes/{id}**: Remove uma reunião pelo ID.
+*   **GET /api/v1/meetings**: Retorna todas as reuniões cadastradas.
+*   **GET /api/v1/meetings/{id}**: Retorna uma reunião específica pelo ID.
+*   **POST /api/v1/meetings**: Cria uma nova reunião.
+*   **PUT /api/v1/meetings/{id}**: Atualiza uma reunião existente pelo ID.
+*   **DELETE /api/v1/meetings/{id}**: Remove uma reunião pelo ID.
 
 ### Presença em Reuniões
 
-*   **POST /api/reunioes/{id}/presenca**: Registra a presença em uma reunião através de reconhecimento facial. Envie a imagem do rosto do usuário no corpo da requisição.
+*   **POST /api/v1/meetings/{id}/attendance**: Registra a presença em uma reunião através de reconhecimento facial. Envie a imagem do rosto do usuário no corpo da requisição.
