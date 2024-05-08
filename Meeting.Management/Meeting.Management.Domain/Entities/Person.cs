@@ -1,6 +1,6 @@
-﻿using Meeting.Management.Domain.Enums;
+﻿using Meetings.Management.Domain.Enums;
 
-namespace Meeting.Management.Domain.Entities
+namespace Meetings.Management.Domain.Entities
 {
     public class Person
     {

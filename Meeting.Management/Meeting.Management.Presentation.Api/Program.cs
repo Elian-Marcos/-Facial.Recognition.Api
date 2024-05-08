@@ -1,4 +1,4 @@
-using Meeting.Management.Infrastructure.Context;
+using Meetings.Management.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using Meeting.Management.Domain.Enums;
+using Meetings.Management.Domain.Enums;
 
-namespace Meeting.Management.Application.Commands.Request.Person
+namespace Meetings.Management.Application.Commands.Request.Person
 {
     public class UpdatePersonRequest : IRequest<Unit>
     {

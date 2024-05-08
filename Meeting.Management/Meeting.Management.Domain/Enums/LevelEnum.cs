@@ -1,4 +1,4 @@
-﻿namespace Meeting.Management.Domain.Enums
+﻿namespace Meetings.Management.Domain.Enums
 {
     public enum LevelEnum
     {

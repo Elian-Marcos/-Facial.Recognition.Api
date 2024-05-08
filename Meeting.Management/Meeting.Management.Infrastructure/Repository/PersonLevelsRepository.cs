@@ -1,9 +1,9 @@
-﻿using Meeting.Management.Domain.Entities;
-using Meeting.Management.Infrastructure.Context;
-using Meeting.Management.Infrastructure.Interface;
+﻿using Meetings.Management.Domain.Entities;
+using Meetings.Management.Infrastructure.Context;
+using Meetings.Management.Infrastructure.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace Meeting.Management.Infrastructure.Repository
+namespace Meetings.Management.Infrastructure.Repository
 {
     public class PersonLevelsRepository : IPersonLevelsRepository
     {

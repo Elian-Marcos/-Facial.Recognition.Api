@@ -3,7 +3,7 @@ using Meetings.Management.Domain.Entities;
 
 namespace Meetings.Management.Application.Queries.Request.Persons
 {
-    public class GetPersonLevelsByIdRequest : IRequest<Level>
+    public class GetMeetingByIdRequest : IRequest<Meeting>
     {
         public Guid Id { get; set; }
     }

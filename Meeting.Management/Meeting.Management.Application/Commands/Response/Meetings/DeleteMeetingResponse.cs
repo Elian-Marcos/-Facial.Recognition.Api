@@ -1,6 +1,6 @@
 ﻿namespace Meetings.Management.Application.Commands.Response.Person
 {
-    public class DeletePersonResponse
+    public class DeleteMeetingResponse
     {
     }
 }

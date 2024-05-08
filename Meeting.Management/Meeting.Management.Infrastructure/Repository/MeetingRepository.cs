@@ -5,44 +5,44 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Meetings.Management.Infrastructure.Repository
 {
-    public class PersonRepository : IPersonRepository
+    public class MeetingRepository : IMeetingRepository
     {
         private readonly AppDbContext _dbContext;
 
-        public PersonRepository(AppDbContext dbContext)
+        public MeetingRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public async Task CreateAsync(Person person)
+        public async Task CreateAsync(Meeting meeting)
         {
-            await _dbContext.Person.AddAsync(person);
+            await _dbContext.Meeting.AddAsync(meeting);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Person>> GetAll()
+        public async Task<IEnumerable<Meeting>> GetAll()
         {
-            return await _dbContext.Person.ToListAsync();
+            return await _dbContext.Meeting.ToListAsync();
         }
 
-        public async Task<Person> GetById(Guid id)
+        public async Task<Meeting> GetById(Guid id)
         {
-            var query = from u in _dbContext.Person
+            var query = from u in _dbContext.Meeting
                         where u.Id.Equals(id)
                         select u;
 
             return await query.FirstAsync();
         }
 
-        public async Task DeleteAsync(Person person)
+        public async Task DeleteAsync(Meeting meeting)
         {
-            _dbContext.Person.Remove(person);
+            _dbContext.Meeting.Remove(meeting);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Person person)
+        public async Task UpdateAsync(Meeting meeting)
         {
-            _dbContext.Entry(person).State = EntityState.Modified;
+            _dbContext.Entry(meeting).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
         }
 

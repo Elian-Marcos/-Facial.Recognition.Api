@@ -1,6 +1,9 @@
-﻿namespace Meetings.Management.Domain.Entities
+﻿using MediatR;
+using Meetings.Management.Domain.Enums;
+
+namespace Meetings.Management.Application.Commands.Request.Person
 {
-    public class Meeting
+    public class UpdateMeetingRequest : IRequest<Unit>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

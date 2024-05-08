@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using Meeting.Management.Domain.Entities;
+using Meetings.Management.Domain.Entities;
 
-namespace Meeting.Management.Application.Queries.Request.Persons
+namespace Meetings.Management.Application.Queries.Request.Persons
 {
     public class GetAllPersonLevelsRequest : IRequest<IEnumerable<Level>>
     {

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Meeting.Management.Application.Commands.Request.Person
+namespace Meetings.Management.Application.Commands.Request.Person
 {
     public class DeletePersonRequest : IRequest<Unit>
     {

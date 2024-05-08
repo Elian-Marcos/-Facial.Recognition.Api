@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using Meeting.Management.Application.Commands.Request.Person;
-using Meeting.Management.Infrastructure.Interface;
+using Meetings.Management.Application.Commands.Request.Person;
+using Meetings.Management.Infrastructure.Interface;
 
-namespace Meeting.Management.Application.Handlers.PersonHandler
+namespace Meetings.Management.Application.Handlers.PersonHandler
 {
     public class DeletePersonHandler : IRequestHandler<DeletePersonRequest, Unit>
     {

@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using Meeting.Management.Application.Commands.Request.Person;
-using Meeting.Management.Application.Queries.Request.Persons;
-using Meeting.Management.Domain.Entities;
+using Meetings.Management.Application.Commands.Request.Person;
+using Meetings.Management.Application.Queries.Request.Persons;
+using Meetings.Management.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Meeting.Management.Presentation.Api.Controllers
+namespace Meetings.Management.Presentation.Api.Controllers
 {
     [Route("api/v1/personLevels")]
     [ApiController]

@@ -1,6 +1,6 @@
-﻿using Meeting.Management.Domain.Enums;
+﻿using Meetings.Management.Domain.Enums;
 
-namespace Meeting.Management.Application.Commands.Response.Person
+namespace Meetings.Management.Application.Commands.Response.Person
 {
     public class CreatePersonLevelsResponse
     {

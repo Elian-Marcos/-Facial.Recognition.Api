@@ -1,6 +1,6 @@
-﻿namespace Meetings.Management.Domain.Entities
+﻿namespace Meetings.Management.Application.Commands.Response.Person
 {
-    public class Meeting
+    public class CreateMeetingResponse
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using Meeting.Management.Application.Queries.Request.Persons;
-using Meeting.Management.Domain.Entities;
-using Meeting.Management.Infrastructure.Interface;
+using Meetings.Management.Application.Queries.Request.Persons;
+using Meetings.Management.Domain.Entities;
+using Meetings.Management.Infrastructure.Interface;
 
-namespace Meeting.Management.Application.Handlers.PersonHandler
+namespace Meetings.Management.Application.Handlers.PersonHandler
 {
     public class GetByIdPersonLevelsHandler : IRequestHandler<GetPersonLevelsByIdRequest, Level>
     {

@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using Meeting.Management.Domain.Entities;
+using Meetings.Management.Domain.Entities;
 
-namespace Meeting.Management.Infrastructure.Interface
+namespace Meetings.Management.Infrastructure.Interface
 {
     public interface IPersonLevelsRepository
     {

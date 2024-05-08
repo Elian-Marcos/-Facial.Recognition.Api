@@ -2,7 +2,7 @@
 
 namespace Meetings.Management.Application.Commands.Request.Person
 {
-    public class DeletePersonLevelsRequest : IRequest<Unit>
+    public class DeleteMeetingRequest : IRequest<Unit>
     {
         public Guid Id { get; set; }
     }
